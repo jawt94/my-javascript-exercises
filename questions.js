@@ -260,8 +260,9 @@ var letterPosition = function (array) {
   function alphabetIndex(letter) {
     var alphabets = '_abcdefghijklmnopqrstuvwxyz';
     return alphabets.indexOf(letter.toLowerCase());
-  }
+  };
+
   return array.map(function(element) {
     return alphabetIndex(element);
-  })
+  });
 };
