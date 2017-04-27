@@ -2,7 +2,6 @@ var selectElementsStartingWithA = function (array) {
   function startingWithA(word) {
     return word.charAt(0) === 'a';
   };
-
   return array.filter(startingWithA);
 };
 
@@ -11,7 +10,6 @@ var selectElementsStartingWithVowel = function (array) {
   function startWithVowel(word) {
     return vowels.indexOf(word.charAt(0)) !== -1;
   }
-
   return array.filter(startWithVowel);
 };
 
@@ -19,7 +17,6 @@ var removeNullElements = function (array) {
   function removeNull(word) {
     return word !== null;
   };
-
   return array.filter(removeNull);
 };
 
@@ -27,7 +24,6 @@ var removeNullAndFalseElements = function (array) {
   function removeNullFalse(word) {
     return word !== null && word !== false;
   };
-
   return array.filter(removeNullFalse);
 };
 
@@ -35,7 +31,6 @@ var reverseWordsInArray = function (array) {
   function reverseLetter(word) {
     return word.split('').reverse().join('');
   };
-
   return array.map(reverseLetter);
 };
 
@@ -48,7 +43,6 @@ var everyPossiblePair = function (array) {
       result.push([student1, student2].sort());
     }
   };
-
   return result.sort();
 };
 
@@ -65,7 +59,6 @@ var sortByLastLetter = function (array) {
   array.sort(function (word1, word2) {
     return word1.slice(-1) > word2.slice(-1);
   });
-
   return array;
 };
 
@@ -84,7 +77,6 @@ var numberOfPalindromes = function (array) {
     if (word === word.split('').reverse().join(''))
     result.push(word);
   });
-
   return result.length;
 };
 
@@ -92,7 +84,6 @@ var shortestWord = function (array) {
   array.sort(function (word1, word2) {
     return word1.length > word2.length;
   });
-
   return array.shift();
 };
 
@@ -100,7 +91,6 @@ var longestWord = function (array) {
   array.sort(function (word1, word2) {
     return word1.length < word2.length;
   });
-
   return array.shift();
 };
 
@@ -123,7 +113,6 @@ var calculateAverage = function (array) {
   var sum = array.reduce(function (a, b) {
     return a + b;
   });
-
   return (sum / array.length);
 };
 
@@ -131,7 +120,6 @@ var getElementsUntilGreaterThanFive = function (array) {
   var biggerThanFive = function (num) {
     return num > 5;
   };
-
   var i = array.findIndex(biggerThanFive);
   return array.slice(0, i);
 };
@@ -141,7 +129,6 @@ var convertArrayToObject = function (array) {
   for (var i = 0; i < array.length; i += 2) {
     object[array[i]] = array[i + 1];
   };
-
   return object;
 };
 
@@ -150,12 +137,10 @@ var getAllLetters = function (array) {
   array.forEach(function (word) {
     result.push(word.split(''));
   });
-
   var result = [].concat.apply([], result).sort();
   var result = result.filter(function (element, i, array) {
     return array.indexOf(element) == i;
   });
-
   return result;
 };
 
@@ -166,7 +151,6 @@ var swapKeysAndValues = function (object) {
   for (var i = 0; i < newK.length; i++) {
     newObject[newK[i]] = newV[i];
   };
-
   return newObject;
 };
 
@@ -176,11 +160,9 @@ var sumKeysAndValues = function (object) {
   array.forEach(function (num) {
     return result.push(parseInt(num));
   });
-
   var sum = result.reduce(function (a, b) {
       return a + b;
     });
-
   return sum;
 };
 
@@ -192,7 +174,6 @@ var removeCapitals = function (string) {
       result.push(letter[i]);
     };
   };
-
   return result.join('');
 };
 
@@ -205,12 +186,10 @@ var formatDateNicely = function (date) {
   if (day < 10) {
     var day = '0' + day;
   };
-
   var month = date.getMonth() + 1;
   if (month < 10) {
     var month = '0' + month;
   };
-
   var year = date.getFullYear();
   var final = day + '/' + month + '/' + year;
   return final;
@@ -233,7 +212,6 @@ var factorial = function (number) {
   for (var i = number - 1; i > 0; i--) {
     sum = (number *= i);
   };
-
   return sum;
 };
 
@@ -244,10 +222,8 @@ var findAnagrams = function (string) {
     remainder = letters.filter(function (element) {
       return element != letter;
     });
-
     result.push(letter + remainder.join(''), letter + (remainder.reverse()).join(''));
   });
-
   return result.sort();
 };
 
