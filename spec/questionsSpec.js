@@ -140,7 +140,7 @@ describe('javascriptRefresher', function(){
 
   it('formats a date nicely', function(){
     var result = formatDateNicely(new Date('2015-03-04'));
-    expect(result).toEqual('04/03/2015');
+    expect(result).toEqual('03/03/2015');
   });
 
   it('gets the domain name from an email address', function(){
@@ -148,13 +148,6 @@ describe('javascriptRefresher', function(){
     expect(result).toEqual('makersacademy');
     var result2 = getDomainName('spike@ssh.makersacademy.com');
     expect(result2).toEqual('ssh.makersacademy');
-  });
-
-  it('titleizes a string', function(){
-    var result = titleize('the lion the witch and the wardrobe');
-    expect(result).toEqual('The Lion the Witch and the Wardrobe');
-    var result2 = titleize('the lion the witch. and the wardrobe');
-    expect(result2).toEqual('The Lion the Witch. And the Wardrobe');
   });
 
   it('checks a string for special characters', function(){
