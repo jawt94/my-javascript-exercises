@@ -1,5 +1,5 @@
 # Javascript Refresher
 
-In this repository you will find a series of short exercises.
+Just a bunch of solutions to JS exercises solved to practice JS methods and syntax. 
 
 To run, open SpecRunner.html in any browser.
